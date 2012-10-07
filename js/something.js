@@ -10,4 +10,6 @@ $(function(){
 	$('.last-li').prepend('<span class="icon-glass"></span>');
 	// $('a[href*="google.com"]').addClass('icon-glass');
 	// $('.last-li').addClass('icon-glass');
+	
+	$('.last-li').clone().appendTo('.product');
 })
