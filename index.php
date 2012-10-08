@@ -1,11 +1,33 @@
-<?php 
-	$y = 'zero';
-	$y .= 'orez';
-	echo $y;
-	
-	$lastday = mktime(0, 0, 0, 3, 0, 2008);
-	echo strftime("2008年最后一天是：%d", $lastday) . "<br />";
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/something.css">
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<title>jQuery test</title>
+</head>
+<body>
+	<?
+	echo "jQuery test";
+	?>
+	<ul>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li>
+			<ul>
+				<li class='last-li'><a href="http://google.com">last li</a> text</li>
+				<li class='last-li'><a target="_blank" href="http://mtv.com">last li</a> text</li>
+			</ul>
+		</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li bottom'>first li</li>
+	</ul>
 
-	echo "<a href='index.html'>index.html</a>";
-	
-?>
+	<script type="text/javascript" src="js/something.js"></script>
+</body>
+</html>
