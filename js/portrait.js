@@ -1,3 +1,6 @@
+
+
+// 把图片插入到对象，在 ajax 中会经常使用
 $(function(){
 	var imgArray = 
 	['loc_portrait01.jpg',
@@ -14,8 +17,9 @@ $(function(){
 	'loc_portrait12.jpg'];
 
 	for (var i = 0; i < imgArray.length; i++) {
-		$('<img />').attr({'src':'upload/images/'+imgArray[i], 'id':'img'+i}).load(function(){
+		$("<img />").attr({'src':'upload/images/'+imgArray[i], 'id':'img'+i}).load(function(){
 			$(this).appendTo('.gallery');
 		})
 	};
 })
+
