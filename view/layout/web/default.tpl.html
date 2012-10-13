@@ -1,72 +1,126 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+<!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-    <title><?=$top_title . ' | ' . c('site_name') ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-     body 
-{
-	padding-top: 60px;
-	padding-bottom: 40px;
-}
-
-.sidebar-nav 
-{
-	padding: 9px 0;
-}
-    </style>
-	<link href="static/css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="static/css/style.css" type="text/css" >
-<?php if( isset($css) && is_array( $css ) ): ?>
-        <?php foreach( $css as $cfile ): ?><link rel="stylesheet" type="text/css" href="static/css/<?=$cfile?>">
-        <?php endforeach; ?>
-<?php endif; ?>
-
-<!--[if lt IE 9]>
-      <script src="static/script/html5.js"></script>
-<![endif]-->
-<!--[if IE 6]>    
-    		<link href="static/css/ie6.min.css" rel="stylesheet">
-<![endif]-->
-</head>    
+	<meta charset="UTF-8">
+	<meta content="no-cache" http-equiv="Pragma">
+	<link rel="stylesheet" href="static/css/custom.css">
+	<script type="text/javascript" src="static/js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.js"></script>
+	<!--[if lt IE 9]>
+      <script src="static/js/html5.js"></script>
+	<![endif]-->
+	<!--[if IE 6]>    
+		<link href="static/css/ie6.min.css" rel="stylesheet">
+	<![endif]-->
+	<title>jQuery test</title>
+</head>
 <body>
- 	<?php @include_once( dirname(__FILE__) ) . DS . 'header.tpl.html'; ?>  
- 
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span3">
-            <?php	
+	<?
+	echo "jQuery test";
+	?>
+	<!-- test 表单 -->
+	<form action="" method="get" id='user'>
+		<input type="text" name="" id="first-name">
+		<input type="text" name="" id="last-name">
+		<input type="email" name="" id="">
+		<input type="submit" value="Submit">
+	</form>
+
+	<!-- test on or live click clone -->
+	<div class="container">
+		container
+		<div class="box">box</div>
+		<div class="box-live">box live</div>
+	</div>
+	<div class="container">
+		container
+		<div class="box">box</div>
+		<div class="box-live">box live</div>
+	</div>
+	<div class="container">
+		container
+		<div class="box">box</div>
+		<div class="box-live">box live</div>
+	</div>
+	<div class="container">
+		container
+		<div class="box">box</div>
+		<div class="box-live">box live</div>
+	</div>
+	<ul>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li>
+			<ul>
+				<li class='last-li'><a href="http://google.com">last li</a> text</li>
+				<li class='last-li'><a target="_blank" href="http://mtv.com">last li</a> text</li>
+			</ul>
+		</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li'>first li</li>
+		<li class='first-li bottom'>first li</li>
+	</ul>
+	<!-- 测试 mouseover and mouseenter 的区别 -->
+	<div class="container">
+		<p>不论鼠标指针穿过被选元素或其子元素，都会触发 mouseover 事件。</p>
+		<p>只有在鼠标指针穿过被选元素时，才会触发 mouseenter 事件。</p>
+		<div class="over" style="background-color:lightgray;padding:20px;width:40%;float:left">
+			<h2 style="background-color:white;">被触发的 Mouseover 事件：<span></span></h2>
+		</div>
+		<div class="enter" style="background-color:lightgray;padding:20px;width:40%;float:right">
+			<h2 style="background-color:white;">被触发的 Mouseenter 事件：<span></span></h2>
+		</div>
+	</div>
+
+	<!-- 测试 toggle -->
+	<a href="#" class="content-link">Show More</a>
+	<div class="content">content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content content </div>
+
+	<!-- test slide gallery -->
+	<div class="slide-gallery">
+		<a href="#" class="photo">photo1</a>
+		<a href="#" class="photo">photo2</a>
+		<a href="#" class="photo">photo3</a>
+	</div>
+
+	<!-- test hover -->
+	<div class="cart">
+		<h2>Shopping Cart</h2>
+	</div>
+	
+	<!-- Other -->
+	<div class="my-link">My link --> test click event</div>
+	<img src="upload/images/lco_portrait00.jpg" alt="test error event" id="portrait">
+	<div class="product">product --> test clone</div>	
+	<div class="gallery"><h1>gallery --> test appendTo</h1></div>
+
+	<!-- layout test -->
+	<div class="row-fluid">
+		<div class="span3">
+			<?php	
 			$tfile = 'view' . DS . 'layout' . DS  . g('layout') . DS . 'side' . DS . g('c') . DS . g('a') . '.tpl.html';
 			if( file_exists( AROOT . $tfile ) ) include( AROOT . $tfile );
 			else @include( CROOT . $tfile );
-			 ?>
-        </div><!--/span-->
-        <div class="span9">
-          <?php 
+			?>
+		</div><!--/span-->
+		<div class="span9">
+			<?php 
 			$tfile = 'view' . DS . 'layout' . DS  . g('layout') . DS . 'main' . DS . g('c') . DS . g('a') . '.tpl.html';
 			if( file_exists( AROOT . $tfile ) ) include( AROOT . $tfile );
 			else @include( CROOT . $tfile );
 			?>
-        </div><!--/span-->
-      </div><!--/row-->
+		</div><!--/span-->
+	</div><!--/row-->
 
-     <?php @include_once( dirname(__FILE__) ) . DS . 'footer.tpl.html'; ?>
-     
-    </div><!--/.fluid-container-->
-    
-    <script src="http://lib.sinaapp.com/js/jquery/1.7/jquery.min.js"></script>
-    <script src="static/script/bootstrap.min.js"></script>
-    <!--[if IE 6]>    
-    		 <script src="static/script/ie6.min.js"></script>
-	<![endif]-->
-    <script src="static/script/app.js"></script>
-    
-    <?php if( isset($js) && is_array( $js ) ): ?>
-        <?php foreach( $js as $jfile ): ?><script type="text/javascript" src="static/script/<?=$jfile;?>" ></script>
-        <?php endforeach; ?>
-	<?php endif; ?>
-   
+	<!-- footer -->
+	<?php @include_once( dirname(__FILE__) ) . DS . 'footer.tpl.html'; ?>
+
+	<!-- javascript -->
+	<script type="text/javascript" src="static/js/something.js"></script>
+	<script type="text/javascript" src="static/js/portrait.js"></script>
+	<script type="text/javascript" src="static/js/form.js"></script>
+	<!-- <script type="text/javascript" src="static/js/unload.js"></script> -->
 </body>
 </html>
