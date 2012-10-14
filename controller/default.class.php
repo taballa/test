@@ -15,4 +15,18 @@ class defaultController extends appController
 		render( $data );
 	}
 
+	function effect()
+	{
+		render($data, 'web', 'default');
+	}
+
+	function message()
+	{
+		render($data, 'web', 'default');
+	}
+
+	function datetime()
+	{
+		render($data, 'web', 'default');
+	}
 }
