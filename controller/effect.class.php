@@ -2,7 +2,7 @@
 if( !defined('IN') ) die('bad request');
 include_once( AROOT . 'controller'.DS.'app.class.php' );
 
-class defaultController extends appController
+class effectController extends appController
 {
 	function __construct()
 	{
@@ -11,8 +11,12 @@ class defaultController extends appController
 	
 	function index()
 	{
-		$data['title'] = $data['top_title'] = 'default class index function page';
-		render( $data );
+		render($data, 'web', 'effect');
 	}
 
+	function message()
+	{
+		render($data, 'web', 'effect');
+	}
+	
 }

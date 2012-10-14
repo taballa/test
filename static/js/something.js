@@ -69,7 +69,6 @@ $('.content-link').on('click', function(){
 // TODO: 显示效果不完善，预期为指向每个链接时，链接尺寸放大，离开时恢复。现在不能正确完成，生成的图层挡住了本来需要触发的图层，计划用鼠标位置完成触发，以后再改。
 // gallery > photos
 // use mouseover mouseout mouseenter mouseleave event.
-
 // $(function(){
 // 	$('a.photo').bind({
 // 		mouseover: function(){
@@ -92,3 +91,20 @@ $(function(){
 })
 
 // test hover event
+
+// test textarea change event
+// todo: 字符显示不正常，不能显示实际剩余数字，阻止输入上屏事件无效，原因不明
+var maxNum = 140;
+$(function(){
+	$('.status').on({keypress : function(){
+		var inputText = $(this).val();
+		var numChar = inputText.length;
+		var charRemain = numChar - maxNum;
+		if (numChar <= maxNum){
+			$('.counter').text(charRemain);
+		}else if(numChar > maxNum){
+			event.preventDefault();
+		}
+	}
+})
+})

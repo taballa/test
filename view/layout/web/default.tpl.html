@@ -1,28 +1,20 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
-<head>
-	<meta charset="UTF-8">
-	<meta content="no-cache" http-equiv="Pragma">
-	<link rel="stylesheet" href="static/css/custom.css">
-	<script type="text/javascript" src="static/js/jquery-1.7.2.js"></script>
-	<script type="text/javascript" src="static/js/bootstrap.js"></script>
-	<!--[if lt IE 9]>
-      <script src="static/js/html5.js"></script>
-	<![endif]-->
-	<!--[if IE 6]>    
-		<link href="static/css/ie6.min.css" rel="stylesheet">
-	<![endif]-->
-	<title>jQuery test</title>
-</head>
+<!-- head -->
+<?php @include_once( dirname(__FILE__) ) . DS . 'head.tpl.html'; ?>
 <body>
+	<!-- header -->
+	<?php @include_once( dirname(__FILE__) ) . DS . 'header.tpl.html'; ?>
 	<?
-	echo "jQuery test";
+	echo "<br /> <br />jQuery test";
 	?>
 	<!-- test 表单 -->
 	<form action="" method="get" id='user'>
 		<input type="text" name="" id="first-name">
 		<input type="text" name="" id="last-name">
 		<input type="email" name="" id="">
+		<textarea name="" id="" cols="30" rows="10" class="status"></textarea>
+		<div>剩余<span class="counter">140</span>个字符</div>
 		<input type="submit" value="Submit">
 	</form>
 
@@ -122,5 +114,7 @@
 	<script type="text/javascript" src="static/js/portrait.js"></script>
 	<script type="text/javascript" src="static/js/form.js"></script>
 	<!-- <script type="text/javascript" src="static/js/unload.js"></script> -->
+
 </body>
 </html>
+
