@@ -1,0 +1,19 @@
+<ul class="nav nav-pills pull-left nav-stacked">
+	<li<?php if( g('a') == 'index' ): ?> class="active"<?php endif; ?>><a href="?a=index">Home</a></li>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle='dropdown'>下拉<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li<?php if( g('a') == 'about' ): ?> class="active"<?php endif; ?>>
+				<a href="?a=about">About</a>
+			</li>
+			<li<?php if( g('a') == 'contact' ): ?> class="active"<?php endif; ?>>
+				<a href="?a=contact">Contact</a>
+			</li>
+			<li class='divider'></li>
+			<li<?php if( g('a') == 'effect' ): ?> class="active"<?php endif; ?>>
+				<a href="?a=effect">effect</a>
+			</li>
+		</ul>
+	</li>
+	<li<?php if( g('a') == 'message' ): ?> class="active"<?php endif; ?>><a href="?a=message">message</a></li>
+</ul>

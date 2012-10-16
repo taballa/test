@@ -4226,3 +4226,10 @@ a.badge:hover {
   left: 120px;
   z-index: 1;
 }
+.advanced {
+  display: none;
+}
+.advanced-toggle {
+  display: block;
+  text-align: center;
+}

@@ -196,10 +196,15 @@
 // --------------------------------------------------
 
 // Border Radius
+@PIERoot : "/test/static/css/";
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
+            // PIE.htc for ie6-9 border radius
+               // position:relative;
+                // z-index:2;
+               // behavior:url("@{PIERoot}PIE.htc");
 }
 
 // Drop shadows

@@ -22,7 +22,7 @@ $(function(){
 
 // test on click
 $(function(){
-	$('.my-link').on('click', alertMe)
+	$('.click-test .my-link').on('click', alertMe)
 	function alertMe(){
 		alert("Hello!");
 	}
@@ -36,15 +36,15 @@ $(function(){// 保证DOM加载
 	})
 
 	// click box or box-live clone this to .container
-	$('.box').on('click',function(){
+	$('.click-test .box').on('click',function(){
 		$(this).clone().appendTo('.container');
 	})
-	$('.box-live').live('click', function(){
+	$('.click-test .box-live').live('click', function(){
 		$(this).clone().appendTo('.container');
 	})
 
 	// test first()
-	$('.container').first().on('click', function(){
+	$('.click-test .container').first().on('click', function(){
 		$(this).clone().addClass('square').appendTo('.container:first');
 	})
 })
@@ -93,7 +93,7 @@ $(function(){
 // test hover event
 
 // test textarea change event
-// todo: 字符显示不正常，不能显示实际剩余数字，阻止输入上屏事件无效，原因不明
+// TODO: 字符显示不正常，不能显示实际剩余数字，阻止输入上屏事件无效，原因不明
 var maxNum = 140;
 $(function(){
 	$('.status').on({keypress : function(){
