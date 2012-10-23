@@ -1,0 +1,7 @@
+.advanced {
+  display: none;
+}
+.advanced-toggle {
+  display: block;
+  text-align: center;
+}

@@ -36,11 +36,23 @@
   left: 120px;
   z-index: 1;
 }
-
 .test-prefixs {
   border-radius: 3px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
-  opacity: .5;
+  opacity: 0.5;
 }
-
+.slide-nav li {
+  list-style-type: none;
+  float: left;
+  width: 30px;
+}
+.slide-nav li a {
+  width: 30px;
+}
+.slide-nav li a.active {
+  font-size: 24px;
+}
+.tool-tip {
+  display: none;
+}

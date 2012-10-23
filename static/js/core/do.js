@@ -23,7 +23,7 @@ config = {
     timeout: 6000,
 
     // 核心库
-    coreLib: ['static/js/jquery-1.7.2.js'],
+    coreLib: ['static/js/core/jquery.js'],
 
     /* 模块依赖
      * {

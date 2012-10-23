@@ -1,14 +1,15 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
 <!-- head -->
-<?php 
-	part('head');
-?>
+<head><?php part('head');?></head>
 <body>
+	<?php part('body');?>
 	<!-- header -->
-	<?php
-		part('header');
-	?>
+	<?php part('header');?>
 
 	<!-- container test -->
 	<div class="container">
@@ -19,10 +20,7 @@
 		</div><!--/row-->
 	</div>
 
-
 	<!-- footer -->
-	<?php 
-		part('footer');
-	?>
+	<?php part('footer');?>
 </body>
 </html>

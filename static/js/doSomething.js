@@ -1,4 +1,4 @@
-Do.ready(
+Do.ready('something-css',
 
 function() {
     // add styleSheets
@@ -25,7 +25,7 @@ function() {
 
 
     // test on click
-    $('.click-test .my-link').on('click', alertMe)
+    $('.my-link').on('click', alertMe)
 
     function alertMe() {
         alert("Hello!");
