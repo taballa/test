@@ -4,17 +4,15 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <meta content="no-cache" http-equiv="Pragma">
-  <link rel="stylesheet" href="static/css/normalize.css">
-  <link rel="stylesheet" href="static/css/main.css">
+
+  <?php part("stylesheet") ?>
+
   <script type="text/javascript" src="static/js/lib/modernizr.min.js"></script>
   <script type="text/javascript" src="static/js/core/do.js"></script>
   <script type="text/javascript" src="static/js/core/addDo.js"></script>
-  
-  <!-- <link rel="stylesheet/less" type="text/css" href="static/css/custom.less">
-      <script type="text/javascript">Do('less');</script> -->
 
   <!--[if lt IE 9]>
       <script type="text/javascript">Do.ready('html5');</script>
   <![endif]-->
-  <title></title>
+  <title><?= g('top_title') . ' | ' . c('site_name') ?></title>
 

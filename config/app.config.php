@@ -1,3 +1,3 @@
 <?php
-$GLOBALS['config']['site_name'] = 'LazyPHP3';
-$GLOBALS['config']['site_domain'] = 'lazyphp3.sinaapp.com';
+$GLOBALS['config']['site_name'] = 'coconote';
+$GLOBALS['config']['site_domain'] = 'coconote.sinaapp.com';

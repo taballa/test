@@ -11,7 +11,7 @@ class defaultController extends appController
 	
 	function index()
 	{
-		$data['title'] = $data['top_title'] = 'default class index function page';
+		$data['title'] = $data['top_title'] = '首页';
 		render( $data );
 	}
 
@@ -28,5 +28,10 @@ class defaultController extends appController
 	function datetime()
 	{
 		render($data, 'web', 'default');
+	}
+
+	function about()
+	{
+		render();
 	}
 }

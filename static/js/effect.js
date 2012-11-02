@@ -31,7 +31,7 @@ Do.ready('effect-css', function() {
 	slideNavList.eq(0).click();
 
 	// text delay animation
-	// TODO: 效果老是累加，应该新动画开始前自动停止。
+	// FIXME: 效果老是累加，应该新动画开始前自动停止。
 	$('.show-tip').hover(
 	function() {
 		$('.tool-tip').fadeIn(900);
