@@ -1,7 +1,8 @@
 <?php 	
 // CHANGED: do firephp
-require_once('FirePHPCore/fb.php');  
-FB::log( g('onlie_events_title') ); 
+if(@include_once('FirePHPCore/fb.php')){
+	FB::log( g('onlie_events_title') ); 
+}  
 
 ?>
 
