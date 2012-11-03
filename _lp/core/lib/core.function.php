@@ -87,7 +87,7 @@ function render( $data = NULL , $layout = NULL , $sharp = NULL )
 			}
 		}
 		require( $layout_file );
-	}
+	} 
 	else
 	{
 		$layout_file = CROOT . 'view/layout/' . $layout . '/' . $sharp .  '.tpl.html';

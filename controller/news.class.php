@@ -26,14 +26,18 @@ class newsController extends appController
 		// $output = ob_get_contents();
 		// ob_end_clean();
 
-		// $html = new simple_html_dom();
+		$html = new simple_html_dom();
 		$html = str_get_html($output);
 		// $html = file_get_html('http://www.douban.com/');
 
 		$text = $html->find('#db-online-events div.title');
 		foreach ($text as $key => $value) {
-			$data['onlie_events_title']['title'] = $value->plaintext;
-			db_insert('douban_online_event', $data['onlie_events_title']);
+			$i = $data['onlie_events_title'][$key] = $value->plaintext;
+			$sql = "INSERT INTO `test`.`douban_online_event` (`id`, `title`) VALUES (NULL, '" . $i . "');";
+			run_sql($sql);
+			db_errno();
+			db_error();
+			last_error();
 		}
 
 		$html->clear();
