@@ -32,11 +32,13 @@ class newsController extends appController
 
 		$text = $html->find('#db-online-events div.title');
 		foreach ($text as $key => $value) {
-			$data['onlie_events_title'][$key] = $value->plaintext;
+			$data['onlie_events_title']['title'] = $value->plaintext;
+			db_insert('douban_online_event', $data['onlie_events_title']);
 		}
 
 		$html->clear();
 		unset($html);
+
 
 		$data['title'] = $data['top_title'] = '新闻';
 

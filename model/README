@@ -1,4 +1,4 @@
-// load model functions
+// Load model functions by CROOT\controller\core.class.php
 
 $model_function_file = AROOT . 'model' . DS . g('c') . '.function.php';
 if( file_exists( $model_function_file ) ) require_once( $model_function_file );
