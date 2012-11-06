@@ -49,6 +49,16 @@ class newsController extends appController
 
 	}
 
+	function events()
+	{
+		$sql = "SELECT * FROM `douban_online_event` LIMIT 0, 30 ";
+
+		$data['top_title'] = '新闻列表';
+		$data['events'] = $events = get_data($sql);
+
+		render($data);
+	}
+
 	function tbs(){
 		$TBS = new clsTinyButStrong;
 		$TBS->loadTemplate('template.html');
