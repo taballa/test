@@ -43,6 +43,7 @@ class newsController extends appController
 		$html->clear();
 		unset($html);
 
+
 		$data['title'] = $data['top_title'] = '新闻';
 
 		render( $data );

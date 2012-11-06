@@ -1,8 +1,16 @@
 <?php 
 
-include_once AROOT . lib . DS . 'ChromePhp.php';
-ChromePhp::log(g('top_title'));
+// include_once AROOT . lib . DS . 'ChromePhp.php';
+uses('ChromePhp.php');
+ChromePhp::log('hello world');
 
+foreach ($_SERVER as $key => $value) {
+    ChromePhp::log($key, $value);
+}
+
+// foreach ($GLOBALS as $key => $value) {
+// 	ChromePhp::log($key, $value);
+// }
 ?>
 
 
