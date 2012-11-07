@@ -6,13 +6,13 @@ function part( $part = 'main', $c = 'default', $a = 'default', $layout = 'web' )
 	$def_tpl_file = 'view' . DS . 'layout' . DS  . g( 'layout' ) . DS . $part . DS . $c . DS . $a . '.tpl.html';
 
 	if ( file_exists( AROOT . $tpl_file ) ) {
-		include AROOT . $tpl_file;
+		include_once AROOT . $tpl_file;
 	}
 	else if ( file_exists( AROOT . $def_tpl_file ) ) {
-		include AROOT . $def_tpl_file;
+		include_once AROOT . $def_tpl_file;
 	}
 	else {
-		@include CROOT . $def_tpl_file;
+		@include_once CROOT . $def_tpl_file;
 	}
 
 }

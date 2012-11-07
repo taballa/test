@@ -1,4 +1,9 @@
-
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="">
@@ -7,12 +12,13 @@
 
   <?php part("stylesheet") ?>
 
-  <script type="text/javascript" src="static/js/lib/modernizr.min.js"></script>
   <script type="text/javascript" src="static/js/core/do.js"></script>
   <script type="text/javascript" src="static/js/core/addDo.js"></script>
+  <script type="text/javascript">Do.ready('modernizr')</script>
+  <script type="text/javascript">Do.ready('plugins')</script>
 
   <!--[if lt IE 9]>
-      <script type="text/javascript">Do.ready('html5');</script>
+    <script type="text/javascript">Do.ready('html5');</script>
   <![endif]-->
   <title><?= g('top_title') . ' | ' . c('site_name') ?></title>
-
+</head>

@@ -33,7 +33,7 @@ class newsController extends appController
 		$text = $html->find('#db-online-events div.title');
 		foreach ($text as $key => $value) {
 			$i = $data['onlie_events_title'][$key] = $value->plaintext;
-			$sql = "INSERT INTO `test`.`douban_online_event` (`id`, `title`) VALUES (NULL, '" . $i . "');";
+			$sql = "INSERT INTO `douban_online_event` (`id`, `title`) VALUES (NULL, '" . $i . "');";
 			run_sql($sql);
 			db_errno();
 			db_error();
@@ -48,6 +48,20 @@ class newsController extends appController
 
 		render( $data );
 
+	}
+
+	function list()
+	{
+		$sql = "SELECT * FROM `douban_online_event` LIMIT 0 , 30"
+
+		$data['list'] = $list = get_data($sql);
+
+		render($data);
+
+		// CHANGED: do firephp
+		if(@include_once('FirePHPCore/fb.php')){
+		    FB::log($data['list']);
+		}  
 	}
 
 	function tbs(){
