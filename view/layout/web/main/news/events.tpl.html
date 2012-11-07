@@ -1,0 +1,29 @@
+<?php 
+// Debug start
+uses('ChromePhp.php');
+ChromePhp::log('hello world');
+
+// foreach ($_SERVER as $key => $value) {
+//     ChromePhp::log($key, $value);
+// }
+
+// foreach ($events as $k => $v) {
+// 	foreach ($events[$k] as $key => $value) {
+// 		ChromePhp::log($key, $value);
+// 	}
+// }
+
+// Debug end
+?>
+
+
+<div>
+	<ul><?php 
+	$events = g('events');
+	foreach ($events as $key => $value) {
+		?>
+		<li><?php echo $events[$key]['title']; ?></li>
+		<?php
+	}
+	?></ul>
+</div>

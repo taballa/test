@@ -13,7 +13,7 @@ class newsController extends appController
 	function index()
 	{
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, 'http://www.douban.com/');
+		curl_setopt($ch, CURLOPT_URL, 'http://www.douban.com/group/youth26/');
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		$output = curl_exec($ch);
@@ -30,9 +30,9 @@ class newsController extends appController
 		$html = str_get_html($output);
 		// $html = file_get_html('http://www.douban.com/');
 
-		$text = $html->find('#db-online-events div.title');
-		foreach ($text as $key => $value) {
-			$i = $data['onlie_events_title'][$key] = $value->plaintext;
+		$result = $html->find('table.olt a[title]');
+		foreach ($result as $key => $value) {
+			$i = $data['onlie_events_title'][$key] = $value->title;
 			$sql = "INSERT INTO `douban_online_event` (`id`, `title`) VALUES (NULL, '" . $i . "');";
 			run_sql($sql);
 			db_errno();
@@ -50,18 +50,14 @@ class newsController extends appController
 
 	}
 
-	function list()
+	function events()
 	{
-		$sql = "SELECT * FROM `douban_online_event` LIMIT 0 , 30"
-
-		$data['list'] = $list = get_data($sql);
+		$data['top_title'] = '新闻列表';
+		$sql = "SELECT * FROM `douban_online_event` ORDER BY `id` DESC LIMIT 0, 30 ";
+		$data['events'] = $events = get_data($sql);
 
 		render($data);
 
-		// CHANGED: do firephp
-		if(@include_once('FirePHPCore/fb.php')){
-		    FB::log($data['list']);
-		}  
 	}
 
 	function tbs(){
