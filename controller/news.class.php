@@ -50,18 +50,14 @@ class newsController extends appController
 
 	}
 
-	function list()
+	function events()
 	{
-		$sql = "SELECT * FROM `douban_online_event` LIMIT 0 , 30"
+		$sql = "SELECT * FROM `douban_online_event` LIMIT 0, 30 ";
 
-		$data['list'] = $list = get_data($sql);
+		$data['top_title'] = '新闻列表';
+		$data['events'] = $events = get_data($sql);
 
 		render($data);
-
-		// CHANGED: do firephp
-		if(@include_once('FirePHPCore/fb.php')){
-		    FB::log($data['list']);
-		}  
 	}
 
 	function tbs(){
