@@ -57,7 +57,6 @@ class newsController extends appController
 		$data['events'] = $events = get_data($sql);
 
 		render($data);
-
 	}
 
 	function tbs(){
