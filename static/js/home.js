@@ -1,4 +1,4 @@
-Do.ready('home-css',
+Do.ready(
 
 function() {
     // add styleSheets
