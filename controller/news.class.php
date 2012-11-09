@@ -35,9 +35,9 @@ class newsController extends appController
 			$i = $data['onlie_events_title'][$key] = $value->title;
 			$sql = "INSERT INTO `douban_online_event` (`id`, `title`) VALUES (NULL, '" . $i . "');";
 			run_sql($sql);
-			db_errno();
-			db_error();
-			last_error();
+			// echo db_errno();
+			// echo db_error();
+			// echo last_error();
 		}
 
 		$html->clear();

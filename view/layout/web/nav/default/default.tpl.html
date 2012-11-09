@@ -1,21 +1,30 @@
+<?php 
+function li( $action, $linktext = null, $control = 'default' ){
+	!$linktext && $linktext = $action;
+	if (g('a') == $action and g('c') == $control ) {
+		echo "<li class='active'><a href='?c=$control&a=$action'>$linktext</a></li>";
+	}else{
+		echo "<li><a href='?c=$control&a=$action'>$linktext</a></li>";
+	}
+}
+ ?>
+
+
 <ul class="nav nav-pills pull-left nav-stacked">
-	<li<?php if( g('a') == 'index' ): ?> class="active"<?php endif; ?>><a href="?a=index">Home</a></li>
+	<?php li('index', 'Home') ?>
 	<li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle='dropdown'>下拉<b class="caret"></b></a>
 		<ul class="dropdown-menu">
-			<li<?php if( g('a') == 'about' ): ?> class="active"<?php endif; ?>>
-				<a href="?a=about">About</a>
-			</li>
-			<li<?php if( g('a') == 'contact' ): ?> class="active"<?php endif; ?>>
-				<a href="?a=contact">Contact</a>
-			</li>
-			<li class='divider'></li>
-			<li<?php if( g('a') == 'effect' ): ?> class="active"<?php endif; ?>>
-				<a href="?a=effect">effect</a>
-			</li>
+			<?php 
+				li('about', 'About');
+				li('contact');
+				li('effect', '效果');
+			?>
 		</ul>
 	</li>
-	<li<?php if( g('a') == 'message' ): ?> class="active"<?php endif; ?>><a href="?a=message">message</a></li>
-	<li<?php if( g('c') == 'news' ): ?> class="active"<?php endif; ?>><a href="?c=news">news</a></li>
-	<li<?php if( g('a') == 'events' ): ?> class="active"<?php endif; ?>><a href="?c=news&a=events">events</a></li>
+	<?php 
+		li('message', '消息');
+		li('index', '新闻', 'news');
+		li('events', '事件', 'news');
+	?>
 </ul>
