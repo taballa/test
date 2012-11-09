@@ -1,4 +1,4 @@
-Do.ready('cookie','message-css', function() {
+Do.ready(function() {
 	// bind
 	$('.special-offer').on('click', function() {
 		$('#message').show(hideMessage);

@@ -1,4 +1,4 @@
-Do.ready('effect-css', function() {
+Do.ready(function() {
 	// test fadin fadeout
 	$('.fade-test>img').on({
 		click: function() {
