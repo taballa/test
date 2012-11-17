@@ -17,8 +17,8 @@ class newsController extends appController
 		// Paging
 		$pagesize = 30;
 		// page number
-		$sql = "SELECT count(id) as numberOfEvent FROM `douban_online_group`";
-		$row = mysql_fetch_array(run_sql($sql));
+		$rowNumberSql = "SELECT count(id) as numberOfEvent FROM `douban_online_group`";
+		$row = mysql_fetch_array(run_sql($rowNumberSql));
 		$data['pagenum'] = $pagenum = ceil($row[0] / $pagesize);
 		// page number /
 		$page = $_GET['page'] >= 1 && $_GET['page'] <= $pagenum ? $_GET['page'] : 1;
