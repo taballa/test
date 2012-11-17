@@ -10,9 +10,10 @@
   <meta name="viewport" content="width=device-width">
   <meta content="no-cache" http-equiv="Pragma">
 
-  <?php part("stylesheet") ?>
+  <?php block("stylesheet") ?>
 
-  <script type="text/javascript" src="static/js/core/do.js"></script>
+  <script type="text/javascript" src="static/js/core/do.min.js"></script>
+  <script type="text/javascript">Do.setConfig('coreLib', ['static/js/core/jquery.js']);</script>
   <script type="text/javascript" src="static/js/core/addDo.js"></script>
   <script type="text/javascript">Do('modernizr')</script>
   <script type="text/javascript">Do('plugins')</script>
@@ -20,5 +21,5 @@
   <!--[if lt IE 9]>
     <script type="text/javascript">Do.ready('html5');</script>
   <![endif]-->
-  <title><?= g('top_title') . ' | ' . c('site_name') ?></title>
+  <title><?= g('title') . ' | ' . c('site_name') ?></title>
 </head>

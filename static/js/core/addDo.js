@@ -4,6 +4,8 @@ Do.add('cookie', {path: 'static/js/lib/jquery.cookie.js', type: 'js'});
 Do.add('bootstrap', {path: 'static/js/lib/bootstrap.js', type: 'js'});
 Do.add('modernizr', {path: 'static/js/lib/modernizr.min.js', type: 'js'});
 Do.add('plugins', {path: 'static/js/lib/plugins.js', type: 'js'});
+Do.add('dropdown', {path: 'static/js/lib/jquery.dropdown.js', type: 'js'});
+
 Do.add('custom', {path: 'static/css/custom.css', type: 'css'});
 
 Do.add('effect-css', {path: 'static/css/page/effect.css', type: 'css'});
