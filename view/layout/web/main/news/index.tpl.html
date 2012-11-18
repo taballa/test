@@ -1,4 +1,154 @@
+<?php 
+// Debug start
+uses('ChromePhp.php');
+ChromePhp::log('hello world');
+
+// foreach ($_SERVER as $key => $value) {
+//     ChromePhp::log($key, $value);
+// }
+
+// foreach ($events as $k => $v) {
+//  foreach ($events[$k] as $key => $value) {
+//      ChromePhp::log($key, $value);
+//  }
+// }
+
+// Debug end
+?>
+
+<div>
+    <ul><?php 
+    $events = g('events');
+    if ($events != false) {
+        foreach ($events as $key => $value) {
+            ?>
+            <li><?php echo $events[$key]['title']; ?></li>
+            <?php
+        }
+    }else{
+        ?>
+        <li>没有内容</li>
+        <?php
+    }
+    ?></ul>
+    <div class="page">
+        <?php 
+        uses('pagination.php');
+        $page   = ($_GET['page']) ? intval($_GET['page']) : 1 ; // 1 by default
+        $tpages = ($_GET['tpages']) ? intval($_GET['tpages']) : g('pagenum'); // 20 by default
+        $adjacents  = ($_GET['adjacents']) ? intval($_GET['adjacents']) : 0 ; // 0 by default
+
+        if($page<=0) $page  = 1;
+        if($adjacents<=0) $adjacents = 3;
+
+        $reload = $_SERVER['PHP_SELF'] . "?c=news&a=index&tpages=" . $tpages . "&amp;adjacents=" . $adjacents;
+        echo paginate_three($reload, $page, $tpages, $adjacents);
+        ?>
+        <?php 
+        if (g('pagenum') > 1) {
+            ?>
+            <ul>
+                <li>
+                    <?php
+                    $current = '';
+                    $range = 7;
+                    $previous = '';
+                    $next = '';
+                    $repeat = floor($range/2) < 2 ? floor($range/2) : 2;
+                    $over_range = $range + floor($range/2);
 
 
-<h1><?php echo '$top_title = ' . g('top_title'); ?></h1>
-<h1><?php echo '$title = ' . g('title'); ?></h1>
+                    // previous
+                    if ($_GET['page'] == null or $_GET['page'] <= 1) {
+                        $current = 1;
+                        echo "<span>&lt 前一页 </span>";
+                    }elseif ($_GET['page'] >= g('pagenum')){
+                        $current = g('pagenum');
+                        $i = g('pagenum') - 1;
+                        echo "<a href='?c=news&a=index&page=$i'>&lt 前一页 </a>";
+                    }else {
+                        $i = ($_GET['page'] - 1);
+                        $current = $i + 1;
+                        echo "<a href='?c=news&a=index&page=$i'>&lt 前一页 </a>";
+                    }
+
+                    // printf("\$current = %s , \$over_range = %s , g('pagenum') = %s <br />", $current, $over_range, g('pagenum'));
+
+                    // page number
+                    if ($current <= $range){
+                        $start = 1;
+                        $end = g('pagenum') > $over_range ? $over_range : g('pagenum');
+                        for ($i=$start; $i <= $end; $i++) { 
+                            if ($i == $current) {
+                                echo " $i ";
+                            }else{
+                                echo "<a href='?c=news&a=index&page=$i'> $i </a>";
+                            }
+                        }
+                    }elseif ( (g('pagenum') - $current) < $range ){
+                        $start = (g('pagenum') - $over_range) < 0 ? g('pagenum') - $range + 1 : (g('pagenum') - $over_range) + 1;
+                        $end = g('pagenum');
+                        if ($start > $repeat) {
+                            for ($i=1; $i <= $repeat; $i++) { 
+                                echo "
+                                <a href='?c=news&a=index&page=$i'> $i </a>
+                                ";
+                            }
+                            if ($start > $repeat + 1) {
+                                echo "...";
+                            }
+                        }
+                        for ($i=$start; $i <= $end; $i++) { 
+                            if ($i == $current) {
+                                echo " $i ";
+                            }else{
+                                echo "<a href='?c=news&a=index&page=$i'> $i </a>";
+                            }
+                        }
+                    }else{
+                        for ($i=1; $i <= $repeat; $i++) { 
+                            echo "
+                            <a href='?c=news&a=index&page=$i'> $i </a>
+                            ";
+                        }
+                        echo "...";
+                        $start = $current - floor($range/2);
+                        $end = $current + floor($range/2);
+                        for ($i=$start; $i <= $end; $i++) { 
+                            if ($i == $current) {
+                                echo " $i ";
+                            }else{
+                                echo "<a href='?c=news&a=index&page=$i'> $i </a>";
+                            }
+                        }
+                    }
+
+                    $wow = fmod(g('pagenum'), 2) == 0 ? g('pagenum') : g('pagenum') + 1;
+                    $yoy = g('pagenum') - $current == $range ? $current - 1 : $current;
+                    if ( g('pagenum') - $over_range > 0 and $wow - $yoy > $range){
+                        if (g('pagenum') - $over_range > $repeat) {
+                            echo "...";
+                        }
+                        $end = g('pagenum') - $repeat;
+                        for ($i=1; $i <= $repeat; $i++) { 
+                            $end += 1;
+                            echo "
+                            <a href='?c=news&a=index&page=$end'> $end </a>
+                            ";
+                        }
+                    }
+                    // next
+                    if ($current == g('pagenum')) {
+                        echo "<span> 后一页 &gt</span>";
+                    }else {
+                        $i = $current + 1;
+                        echo "<a href='?c=news&a=index&page=$i'> 后一页 &gt</a>";
+                    }
+                    ?>
+                </li>
+            </ul>
+            <?php
+        }
+        ?>
+    </div>
+</div>

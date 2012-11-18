@@ -9,22 +9,32 @@ function li( $action, $linktext = null, $control = 'default' ){
 }
  ?>
 
-
-<ul class="nav nav-pills pull-left nav-stacked">
-	<?php li('index', 'Home') ?>
-	<li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle='dropdown'>下拉<b class="caret"></b></a>
-		<ul class="dropdown-menu">
-			<?php 
-				li('about', 'About');
-				li('contact');
-				li('effect', '效果');
-			?>
-		</ul>
-	</li>
-	<?php 
-		li('message', '消息');
-		li('index', '新闻', 'news');
-		li('events', '事件', 'news');
-	?>
-</ul>
+<script type="text/javascript">Do.ready('dropdown');</script>
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<ul class="nav">
+				<a class="brand" href="#">
+				品牌名称
+				</a>
+				<li class="divider-vertical"></li>
+				<?php li('index', 'Home') ?>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">帐户<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<?php 
+							li('about', 'About');
+							li('contact');
+							li('effect', '效果');
+						?>
+					</ul>
+				</li>
+				<?php 
+					li('message', '消息');
+					li('index', '新闻', 'news');
+					li('fetch', '获取', 'news');
+				?>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -12,6 +12,28 @@ class newsController extends appController
 	
 	function index()
 	{
+		$data['title'] = '新闻列表';
+
+		// Paging
+		$pagesize = 30;
+		// page number
+		$sql = "SELECT count(id) as numberOfEvent FROM `douban_online_group`";
+		$row = mysql_fetch_array(run_sql($sql));
+		$data['pagenum'] = $pagenum = ceil($row[0] / $pagesize);
+		// page number /
+		$page = $_GET['page'] >= 1 && $_GET['page'] <= $pagenum ? $_GET['page'] : 1;
+		$offset = ($page-1)*$pagesize;
+		
+		// events
+		$sql = "SELECT * FROM `douban_online_group` ORDER BY `id` DESC LIMIT $offset, $pagesize";
+		$data['events'] = get_data($sql);
+		
+
+		render($data);
+	}
+
+	function fetch()
+	{
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, 'http://www.douban.com/group/youth26/');
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -33,7 +55,7 @@ class newsController extends appController
 		$result = $html->find('table.olt a[title]');
 		foreach ($result as $key => $value) {
 			$i = $data['onlie_events_title'][$key] = $value->title;
-			$sql = "INSERT INTO `douban_online_event` (`id`, `title`) VALUES (NULL, '" . $i . "');";
+			$sql = "INSERT INTO `douban_online_group` (`id`, `title`) VALUES (NULL, '" . $i . "');";
 			run_sql($sql);
 			// echo db_errno();
 			// echo db_error();
@@ -47,16 +69,6 @@ class newsController extends appController
 		$data['title'] = $data['top_title'] = '新闻';
 
 		render( $data );
-
-	}
-
-	function events()
-	{
-		$data['top_title'] = '新闻列表';
-		$sql = "SELECT * FROM `douban_online_event` ORDER BY `id` DESC LIMIT 0, 30 ";
-		$data['events'] = $events = get_data($sql);
-
-		render($data);
 	}
 
 	function tbs(){

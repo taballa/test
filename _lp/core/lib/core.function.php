@@ -125,7 +125,7 @@ function info_page( $info , $title = '系统消息' )
 	else
 		$layout = 'web';
 	
-	$data['top_title'] = $data['title'] = $title;
+	$data['title'] = $title;
 	$data['info'] = $info;
 	
 	render( $data , $layout , 'info' );
