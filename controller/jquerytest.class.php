@@ -8,10 +8,12 @@ class jquerytestController extends appController
     {
         parent::__construct();
     }
-    
+
     function index()
     {
+        $sql = "SELECT * FROM `douban_online_group` ORDER BY `id` DESC LIMIT 25";
+        $data['event'] = get_data($sql);
         render($data, 'web', 'default');
     }
-    
+
 }
