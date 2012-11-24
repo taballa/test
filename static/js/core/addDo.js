@@ -19,4 +19,4 @@ Do.add('form', {path: 'static/js/form.js', type: 'js'});
 Do.add('radius', {path: 'static/js/radius.js', type: 'js'});
 Do.add('effect', {path: 'static/js/effect.js', type: 'js', requires: ['effect-css']});
 Do.add('message', {path: 'static/js/message.js', type: 'js', requires: ['cookie','message-css']});
-
+Do.add('jqtest', {path: 'static/js/jqtest.js', type: 'js'});

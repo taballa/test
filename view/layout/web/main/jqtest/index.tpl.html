@@ -1,0 +1,13 @@
+
+<div style='margin-left:20px'>
+    <ol>
+        <?php 
+        foreach (g('event') as $key => $value) {
+            ?>
+            <li><?= $value['title'] ?></li>
+            <?php
+        }
+        ?>
+    </ol>
+</div>
+<div class="events-list"></div>
