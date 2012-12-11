@@ -1,17 +1,16 @@
 
 <div style='margin-left:20px'>
     <ol>
-        <?php 
-        foreach (g('event') as $key => $value) {
-            ?>
-            <li><?= $value['title'] ?></li>
-            <?php
-        }
-        ?>
+        <?php foreach (g('event') as $key => $value): ?>
+        <li><?= $value['title'] ?></li>
+        <?php endforeach ?>
+    </ol>
+    <ol id='news-feed'>
+        
     </ol>
 </div>
 <div class="events-list"></div>
 
 TODO:
 数组内放入10条数据
-每2000毫秒重新抓取数据
+每2000毫秒重新抓取数据 => #news-feed

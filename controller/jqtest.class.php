@@ -27,5 +27,10 @@ class jqtestController extends appController
             }
         }
     }
+
+    function photos()
+    {
+        render( $data, null, 'default' );
+    }
     
 }
