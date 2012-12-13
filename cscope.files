@@ -57,7 +57,7 @@ C:\wamp\www\test\controller\app.class.php
 C:\wamp\www\test\controller\origin.class.php
 C:\wamp\www\test\controller\default.class.php
 C:\wamp\www\test\controller\news.class.php
-C:\wamp\www\test\controller\jquerytest.class.php
+C:\wamp\www\test\controller\jqtest.class.php
 C:\wamp\www\test\lib\simple_html_dom.php
 C:\wamp\www\test\lib\tiny_but_strong.php
 C:\wamp\www\test\lib\ChromePhp.php
@@ -75,7 +75,7 @@ C:\wamp\www\test\static\js\test.js
 C:\wamp\www\test\static\js\effect.js
 C:\wamp\www\test\static\js\home.js
 C:\wamp\www\test\static\js\message.js
-C:\wamp\www\test\static\js\jquerytest.js
+C:\wamp\www\test\static\js\jqtest.js
 C:\wamp\www\test\static\js\core\jquery.js
 C:\wamp\www\test\static\js\core\less.min.js
 C:\wamp\www\test\static\js\core\html5.js
@@ -141,7 +141,7 @@ C:\wamp\www\test\view\layout\web\main\default\index.tpl.html
 C:\wamp\www\test\view\layout\web\main\default\message.tpl.html
 C:\wamp\www\test\view\layout\web\main\news\index.tpl.html
 C:\wamp\www\test\view\layout\web\main\news\fetch.tpl.html
-C:\wamp\www\test\view\layout\web\main\jquerytest\index.tpl.html
+C:\wamp\www\test\view\layout\web\main\jqtest\index.tpl.html
 C:\wamp\www\test\view\layout\web\header\default\default.tpl.html
 C:\wamp\www\test\view\layout\web\footer\default\default.tpl.html
 C:\wamp\www\test\view\layout\web\head\default\default.tpl.html
@@ -149,6 +149,6 @@ C:\wamp\www\test\view\layout\web\nav\default\default.tpl.html
 C:\wamp\www\test\view\layout\web\script\default\effect.tpl.html
 C:\wamp\www\test\view\layout\web\script\default\index.tpl.html
 C:\wamp\www\test\view\layout\web\script\default\message.tpl.html
-C:\wamp\www\test\view\layout\web\script\jquerytest\index.tpl.html
+C:\wamp\www\test\view\layout\web\script\jqtest\index.tpl.html
 C:\wamp\www\test\view\layout\web\stylesheet\default\default.tpl.html
 C:\wamp\www\test\view\layout\web\lt-ie7\default\default.tpl.html

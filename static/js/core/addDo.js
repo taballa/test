@@ -11,6 +11,7 @@ Do.add('custom', {path: 'static/css/custom.css', type: 'css'});
 Do.add('effect-css', {path: 'static/css/page/effect.css', type: 'css'});
 Do.add('message-css', {path: 'static/css/page/message.css', type: 'css'});
 Do.add('home-css', {path: 'static/css/page/home.css', type: 'css'});
+Do.add('photos-css', {path: 'static/css/page/photos.css', type: 'css'});
 
 
 Do.add('home', {path: 'static/js/home.js', type: 'js', requires: ['home-css']});

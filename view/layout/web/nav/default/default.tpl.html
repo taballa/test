@@ -20,21 +20,29 @@ function li( $action, $linktext = null, $control = 'default' ){
 				<li class="divider-vertical"></li>
 				<?php li('index', 'Home') ?>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">帐户<b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单<b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<?php 
 							li('about', 'About');
-							li('contact');
-							li('effect', '效果');
+							li('contact', '空');
+							li('effect', '效果演示');
 						?>
 					</ul>
 				</li>
 				<?php 
 					li('message', '消息');
 					li('index', '新闻', 'news');
-					li('fetch', '获取', 'news');
-					li('index', 'jQuery 测试', 'jqtest');
 				?>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">测试<b class='caret'></b></a>
+					<ul class="dropdown-menu">
+					<?php 
+						li('fetch', '获取数据', 'news');
+						li('index', '滚动条目', 'jqtest');
+						li('photos', '图库', 'jqtest');
+					?>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>

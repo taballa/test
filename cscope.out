@@ -1,4 +1,4 @@
-cscope 15 C:\wamp\www\test"               0001492605
+cscope 15 C:\wamp\www\test"               0001493505
 	@C:\wamp\www\test\404.html
 
 1 <!
@@ -11,7 +11,7 @@ DOCTYPE
 html
  
 	gÏng
-="en">
+="zh-CN">
 
 3 <
 h—d
@@ -58663,7 +58663,7 @@ funùiÚ
 	}
 }
 
-	@C:\wamp\www\test\controller\jquerytest.class.php
+	@C:\wamp\www\test\controller\jqtest.class.php
 
 1 <?
 php
@@ -58684,7 +58684,7 @@ DS
 .'app.class.php' );
 
 5 şas 
-	cjqu”y‹¡CÚŒŞËr
+	cjq‹¡CÚŒŞËr
  
 ex‹nds
  
@@ -58744,17 +58744,17 @@ $sql
  = "SELECT * FROM `douban_online_group` ORDER BY `id` DESC LIMIT 20";
 
 23 
+$t™Ë
+ = 
+	`¬¿y
+();
+
+24 
 $ev’ts
  = 
 	`g‘_d©a
 (
 $sql
-);
-
-24 
-	`v¬_dump
-(
-$ev’ts
 );
 
 25 ià(!
@@ -58764,12 +58764,38 @@ $ev’ts
 )) {
 
 26 
+	`fÜ—ch
+ (
+$ev’ts
+ 
+as
+ 
+$i
+=>
+$v®ue
+) {
+
+27 
+	`¬¿y_push
+(
+$t™Ë
+, 
+$ev’ts
+[
+$i
+]['title']);
+
+30 
 echo
  
-$ev’ts
-[0];
+	`jsÚ_’code
+Ğ(
+objeù
+)
+$t™Ë
+ );
 
-28 
+31 
 	}
 }
 
@@ -92179,10 +92205,10 @@ ty³
 	gDo
 .
 add
-('jqu”y‹¡'), {
-	g·th
-: '¡©ic/js/jqu”y‹¡.js', 
-	gty³
+('jq‹¡', {
+·th
+: '¡©ic/js/jq‹¡.js', 
+ty³
 : 'js'});
 
 	@C:\wamp\www\test\static\js\core\do.min.js
@@ -92207,13 +92233,13 @@ u
 autoLßd
 : 
 Œue
-, 
+,
 timeout
-: 6000, 
+: 6000,
 cÜeLib
-: [], 
+: [],
 mods
-: {} }, 
+: {}}, 
 o
  = (
 	`funùiÚ
@@ -92249,11 +92275,11 @@ i
 x
 è{v¬ 
 w
- = u.mods, d; if(
+ = u.mods, d; ià(
 ty³of
  x ==ğ"¡ršg"è{d = (w[x]è? w[x] : {
 ·th
-: x } } {d = x }  d }, 
+: x} } {d = x }  d }, 
 g
  = funùiÚ(d, 
 C
@@ -92273,11 +92299,11 @@ z
 nuÎ
 ; c.
 	`ş—rTimeout
-(Bè}; if(!dè{ } ifÒ[d]è{a[d] = f®£; if(yè{y(dè}  } if×[d]è{
+(Bè}; ià(!dè{ } iàÒ[d]è{a[d] = f®£; ià(yè{y(dè}  } ià×[d]è{
 	`£tTimeout
 (funùiÚ(è{
 	`g
-(d, C, x, yè}, 10);  }‡[d] =rue; B = c.£tTimeout(funùiÚ(è{if(u.
+(d, C, x, yè}, 10);  }‡[d] =rue; B = c.£tTimeout(funùiÚ(è{ià(u.
 timeoutC®lback
 è{
 Œy
@@ -92285,7 +92311,7 @@ timeoutC®lback
 	`timeoutC®lback
 (dè} 
 	`ÿtch
-(
+ (
 E
 è{} } }, u.timeout); D = C || d.
 	`toLow”Ca£
@@ -92295,13 +92321,13 @@ E
 	`pİ
 ().
 	`»¶aû
-(/[\?#].*/, ""); if(D ==ğ"js"è{w = v.
+(/[\?#].*/, ""); ià(D ==ğ"js"è{w = v.
 	`ü—‹EËm’t
 ("süt"); w.
 	`£tA‰ribu‹
-("ty³", "‹xt/javasüt"); w.£tA‰ribu‹("¤c", d); w.£tA‰ribu‹("async",rueè} {if(D ==ğ"css"è{w = v.ü—‹EËm’t("lšk"); w.£tA‰ribu‹("ty³", "‹xt/css"); w.£tA‰ribu‹("»l", "¡yËsh“t"); w.£tA‰ribu‹("h»f", dè} } if(xè{w.
+("ty³", "‹xt/javasüt"); w.£tA‰ribu‹("¤c", d); w.£tA‰ribu‹("async",rueè} {ià(D ==ğ"css"è{w = v.ü—‹EËm’t("lšk"); w.£tA‰ribu‹("ty³", "‹xt/css"); w.£tA‰ribu‹("»l", "¡yËsh“t"); w.£tA‰ribu‹("h»f", dè} } ià(xè{w.
 ch¬£t
- = x } if(D ==ğ"css"è{£tTimeout(funùiÚ(è{
+ = x } ià(D ==ğ"css"è{£tTimeout(funùiÚ(è{
 	`z
 (è}, 0è} {w.
 Ú”rÜ
@@ -92309,7 +92335,7 @@ ch¬£t
 Úlßd
  = w.
 Ú»ady¡©echªge
- = funùiÚ(è{v¬ E; if(!
+ = funùiÚ(è{v¬ E; ià(!
 this
 .
 »adyS‹
@@ -92321,15 +92347,15 @@ this
 l
  = funùiÚ(C, xè{v¬ D = u.mods, d, w, A, y = 0, z; d = C.
 	`još
-(""); z = C.Ëngth; if(s[d]è{
+(""); z = C.Ëngth; ià(s[d]è{
 	`x
 ();  } 
 funùiÚ
  
 	`B
-(è{if(!--zè{s[d] = 1; x(è} } ; w = C[y++];è{A = 
+(è{ià(!--zè{s[d] = 1; x(è} } ; w = C[y++]; ) {A = 
 	`i
-(w); if(A.
+(w); ià(A.
 »quœes
 è{
 	`l
@@ -92347,19 +92373,19 @@ F
 addEv’tLi¡’”
  ? "addEv’tLi¡’”" : "©chEv’t", D = C.addEv’tLi¡’” ? "»moveEv’tLi¡’”" : "d‘achEv’t", d = C.addEv’tLi¡’” ? "" : "Ú", E = funùiÚ(
 G
-è{if(G.ty³ =ğ"»ady¡©echªge" && C.»adyS‹ !ğ"com¶‘e"è{ }(G.ty³ =ğ"lßd" ? c : C)[D](d + G.ty³, E, f®£); if(!w && (w =rue)è{A.
+è{ià(G.ty³ =ğ"»ady¡©echªge" && C.»adyS‹ !ğ"com¶‘e"è{ } (G.ty³ =ğ"lßd" ? c : C)[D](d + G.ty³, E, f®£); ià(!w && (w =rue)è{A.
 	`ÿÎ
 (c, G.ty³ || Gè} }, y = funùiÚ(è{Œy {B.
 	`doSüŞl
-("Ëá"è} c©ch(Gè{£tTimeout(y, 50);  } 
+("Ëá"è} c©ch (Gè{£tTimeout(y, 50);  } 
 	`E
-("pŞl"è}; if(C.»adyS‹ =ğ"com¶‘e"è{A.ÿÎ(c, "Ïzy"è} {if(C.
+("pŞl"è}; ià(C.»adyS‹ =ğ"com¶‘e"è{A.ÿÎ(c, "Ïzy"è} {ià(C.
 ü—‹Ev’tObjeù
  && B.
 doSüŞl
 è{Œy {z = !c.
 äameEËm’t
- } c©ch(xè{} if(zè{y(è} } C[F](d + "DOMCÚ‹ÁLßded", E, f®£); C[F](d + "»ady¡©echªge", E, f®£); c[F](d + "lßd", E, f®£è} }, 
+ } c©ch (xè{} ià(zè{y(è} } C[F](d + "DOMCÚ‹ÁLßded", E, f®£); C[F](d + "»ady¡©echªge", E, f®£); c[F](d + "lßd", E, f®£è} }, 
 f
  = funùiÚ(è{v¬ d; d = j.
 	`shiá
@@ -92371,13 +92397,13 @@ p
 ¦iû
 .ÿÎ(
 ¬gum’ts
-), w, x; if(u.autoLßd && u.cÜeLib.Ëngth && !s[u.cÜeLib.još("")]è{l(u.cÜeLib, funùiÚ(è{p.­¶yÒuÎ, dè});  } ifÓ.Ëngth && !s[e.još("")]è{lÓ, funùiÚ(è{p.­¶yÒuÎ, dè});  } ifÑy³oàd[d.Ëngth - 1] ==ğ"funùiÚ"è{w = d.pİ(è} x = d.još(""); if((d.Ëngth ==ğ0 || s[x]è&& wè{
+), w, x; ià(u.autoLßd && u.cÜeLib.Ëngth && !s[u.cÜeLib.još("")]è{l(u.cÜeLib, funùiÚ(è{p.­¶yÒuÎ, dè});  } iàÓ.Ëngth && !s[e.još("")]è{lÓ, funùiÚ(è{p.­¶yÒuÎ, dè});  } iàÑy³oàd[d.Ëngth - 1] ==ğ"funùiÚ"è{w = d.pİ(è} x = d.još(""); ià((d.Ëngth ==ğ0 || s[x]è&& wè{
 	`w
 ();  }†(d, funùiÚ(è{s[x] = 1; w && w(è}è};….
 add
  =….
 defše
- = funùiÚ(w, dè{if(!w || !d || !d.·thè{ } u.mods[w] = d };….
+ = funùiÚ(w, dè{ià(!w || !d || !d.·thè{ } u.mods[w] = d };….
 d–ay
  = funùiÚ(è{v¬ w = [].¦iû.ÿÎ×rgum’ts), d = w.shiá(); c.£tTimeout(funùiÚ(è{p.­¶yÑhis, wè}, dè};….
 glob®
@@ -92387,15 +92413,15 @@ glob®
 	`cÚÿt
 (dè};….
 »ady
- = funùiÚ(è{v¬ d = [].¦iû.ÿÎ×rgum’ts); if(mè{….­¶yÑhis, dè} j.
+ = funùiÚ(è{v¬ d = [].¦iû.ÿÎ×rgum’ts); ià(mè{….­¶yÑhis, dè} j.
 	`push
 (dè};….
 css
  = funùiÚ(wè{v¬ d = v.
 	`g‘EËm’tById
-("do-šlše-css"); if(!dè{d = v.ü—‹EËm’t("¡yË"); d.ty³ = "‹xt/css"; d.
+("do-šlše-css"); ià(!dè{d = v.ü—‹EËm’t("¡yË"); d.ty³ = "‹xt/css"; d.
 id
- = "do-šlše-css"; o.·»ÁNode.š£¹BefÜe(d, oè} if(d.
+ = "do-šlše-css"; o.·»ÁNode.š£¹BefÜe(d, oè} ià(d.
 ¡yËSh“t
 è{d.¡yËSh“t.
 cssText
@@ -92407,19 +92433,19 @@ cssText
 £tD©a
  =….
 £tPublicD©a
- = funùiÚ(x, wè{v¬ d =[x]; b[x] = w; if(!dè{ } d.Ëngth > 0è{(d.pİ()).ÿÎÑhis, wè} };….
+ = funùiÚ(x, wè{v¬ d =[x]; b[x] = w; ià(!dè{ } d.Ëngth > 0è{(d.pİ()).ÿÎÑhis, wè} };….
 g‘D©a
  =….
 g‘PublicD©a
- = funùiÚ(w, dè{if(b[w]è{
+ = funùiÚ(w, dè{ià(b[w]è{
 	`d
-(b[w]);  } if(!t[w]è{t[w] = [] }[w].push(funùiÚ(xè{d(xè}è};….
+(b[w]);  } ià(!t[w]è{t[w] = [] }[w].push(funùiÚ(xè{d(xè}è};….
 £tCÚfig
  = funùiÚ(w, dè{u[w] = d; … };….
 g‘CÚfig
  = funùiÚ(dè{ u[d] }; h = o.
 	`g‘A‰ribu‹
-("d©a-cfg-autŞßd"); if(hè{u.autoLßd = (h.toLow”Ca£(è==ğ"Œue"è?ru: f®£ } h = o.g‘A‰ribu‹("d©a-cfg-cÜ–ib"); if(hè{u.cÜeLib = h.¥l™(","è} ifÑy³oà
+("d©a-cfg-autŞßd"); ià(hè{u.autoLßd = (h.toLow”Ca£(è==ğ"Œue"è?ru: f®£ } h = o.g‘A‰ribu‹("d©a-cfg-cÜ–ib"); ià(hè{u.cÜeLib = h.¥l™(","è} iàÑy³oà
 Do
  !=ğ"undefšed"è{ğDo.glob®.mods; u.mod ğDo.mods; v¬ 
 q
@@ -138995,7 +139021,7 @@ ev’t
 	}
 });
 
-	@C:\wamp\www\test\static\js\jquerytest.js
+	@C:\wamp\www\test\static\js\jqtest.js
 
 1 
 	gDo
@@ -139005,13 +139031,89 @@ ev’t
 	$funùiÚ
 (){
 
-2 
-	`$
-('.ev’ts-li¡').
-	`lßd
-('?c=jquerytest&a=geteventes')
-
 3 
+funùiÚ
+ 
+	`¦ideH—dlše
+(){
+
+4 
+	`$
+('#Ãws-ãed†i:Ï¡').
+	`şÚe
+().
+	`´•’dTo
+('#Ãws-ãed').
+	`hide
+();
+
+5 
+	`$
+('#Ãws-ãed†i:fœ¡').
+	`çdeIn
+(500).
+	`¦ideDown
+(500);
+
+6 
+	`$
+('#Ãws-ãed†i:Ï¡').
+	`»move
+();
+
+8 
+$
+.
+	`g‘JSON
+('?c=jq‹¡&a=g‘ev’ts', 
+	`funùiÚ
+(
+jsÚ
+){
+
+9 ià(
+jsÚ
+.
+Ëngth
+ != 0) {
+
+10 
+$
+.
+	`—ch
+(
+jsÚ
+, 
+	`funùiÚ
+(
+šdex
+, 
+’Œy
+){
+
+11 
+	`$
+('#Ãws-ãed').
+	`­³nd
+('<l˜şass="Ãw¢um' + 
+šdex
+ + '">' + 
+’Œy
+ + '</li>');
+
+13 
+	`£tIÁ”v®
+(
+¦ideH—dlše
+, 2000);
+
+15 
+	`$
+('#Ãws-ãed').
+	`­³nd
+('<p>æ²¡æœ‰å†…å®¹</p>');
+
+18 
 	}
 })
 
@@ -210375,13 +210477,33 @@ h‰p
 equiv
 ="Pragma">
 
-13 <?
+12 <
+m‘a
+ 
+h‰p
+-
+equiv
+="Expœes" 
+cÚ‹Á
+="Sun, 6 Mar 2005 01:00:00 GMT">
+
+13 <
+m‘a
+ 
+h‰p
+-
+equiv
+="ÿche-cÚŒŞ" 
+cÚ‹Á
+="no-store, must-revalidate">
+
+15 <?
 php
  
 block
 ("stylesheet") ?>
 
-15 <
+17 <
 süt
  
 ty³
@@ -210389,7 +210511,7 @@ ty³
 ¤c
 ="static/js/core/do.min.js"></script>
 
-16 <
+18 <
 süt
  
 ty³
@@ -210401,7 +210523,7 @@ Do
 	gsüt
 >
 
-17 <
+19 <
 süt
  
 	gty³
@@ -210409,7 +210531,7 @@ süt
 ¤c
 ="static/js/core/addDo.js"></script>
 
-18 <
+20 <
 süt
  
 ty³
@@ -210417,7 +210539,7 @@ ty³
 Do
 ('modernizr')</script>
 
-19 <
+21 <
 süt
  
 ty³
@@ -210425,13 +210547,13 @@ ty³
 Do
 ('plugins')</script>
 
-21 <!--[
+23 <!--[
 É
  
 IE
  9]>
 
-22 <
+24 <
 süt
  
 ty³
@@ -210443,11 +210565,11 @@ Do
 	gsüt
 >
 
-23 <![
+25 <![
 ’dif
 ]-->
 
-24 <
+26 <
 	gt™Ë
 ><?ğ
 g
@@ -210457,7 +210579,7 @@ c
 t™Ë
 >
 
-25 </
+27 </
 h—d
 >
 
@@ -211553,7 +211675,7 @@ süt
 ¤c
 ="https://gist.github.com/3888383.js?file=index.tpl.html"></script> -->
 
-	@C:\wamp\www\test\view\layout\web\main\jquerytest\index.tpl.html
+	@C:\wamp\www\test\view\layout\web\main\jqtest\index.tpl.html
 
 2 <
 div
@@ -211595,15 +211717,15 @@ php
 	gŞ
 >
 
-12 </
-	gdiv
->
-
-13 <
-div
+12 <
+Ş
  
-	gşass
-="events-list"></div>
+	gid
+="news-feed"></ol>
+
+13 </
+div
+>
 
 	@C:\wamp\www\test\view\layout\web\main\news\fetch.tpl.html
 
@@ -212279,7 +212401,7 @@ h»f
 d©a
 -
 toggË
-="drİdown">å¸æˆ·<
+="drİdown">ä¸‹æ‹‰èœå•<
 b
  class="caret"></b></a>
 
@@ -212299,11 +212421,11 @@ li
 
 27 
 li
-('contact');
+('contact', 'ç©º');
 
 28 
 li
-('effect', 'æ•ˆæœ');
+('effect', 'æ•ˆæœæ¼”ç¤º');
 
 30 </
 	gul
@@ -212325,27 +212447,65 @@ li
 li
 ('index', 'æ–°é—»', 'news');
 
-35 
+36 <
 li
-('fetch', 'è·å–', 'news');
+ 
+	gşass
+="dropdown">
 
-36 
+37 <
+a
+ 
+h»f
+="#" 
+şass
+="drİdown-toggË" 
+d©a
+-
+toggË
+="drİdown">æµ‹è¯•<
+b
+ class='caret'></b></a>
+
+38 <
+ul
+ 
+şass
+="dropdown-menu">
+
+39 <?
+php
+
+
+40 
 li
-('index', 'jQuery æµ‹è¯•', 'jquerytest');
+('fetch', 'è·å–æ•°æ®', 'news');
 
-38 </
+41 
+li
+('index', 'jQuery æµ‹è¯•', 'jqtest');
+
+43 </
 	gul
 >
 
-39 </
+44 </
+	gli
+>
+
+45 </
+	gul
+>
+
+46 </
 	gdiv
 >
 
-40 </
+47 </
 	gdiv
 >
 
-41 </
+48 </
 	gdiv
 >
 
@@ -212491,7 +212651,7 @@ Do
 	gsüt
 >
 
-	@C:\wamp\www\test\view\layout\web\script\jquerytest\index.tpl.html
+	@C:\wamp\www\test\view\layout\web\script\jqtest\index.tpl.html
 
 1 <
 süt
@@ -212503,7 +212663,7 @@ süt
 Do
 .
 »ady
-('jquerytest');
+('jqtest');
 
 3 </
 	gsüt
@@ -212636,7 +212796,7 @@ block
 .
 0
 154
-8526
+8510
 C:\wamp\www\test\404.html
 C:\wamp\www\test\_lp\core\config\core.config.php
 C:\wamp\www\test\_lp\core\controller\core.class.php
@@ -212693,7 +212853,7 @@ C:\wamp\www\test\config\app.config.php
 C:\wamp\www\test\config\db.config.php
 C:\wamp\www\test\controller\app.class.php
 C:\wamp\www\test\controller\default.class.php
-C:\wamp\www\test\controller\jquerytest.class.php
+C:\wamp\www\test\controller\jqtest.class.php
 C:\wamp\www\test\controller\news.class.php
 C:\wamp\www\test\controller\origin.class.php
 C:\wamp\www\test\index.php
@@ -212715,7 +212875,7 @@ C:\wamp\www\test\static\js\core\require.js
 C:\wamp\www\test\static\js\effect.js
 C:\wamp\www\test\static\js\form.js
 C:\wamp\www\test\static\js\home.js
-C:\wamp\www\test\static\js\jquerytest.js
+C:\wamp\www\test\static\js\jqtest.js
 C:\wamp\www\test\static\js\lib\bootstrap.js
 C:\wamp\www\test\static\js\lib\jquery.cookie.js
 C:\wamp\www\test\static\js\lib\jquery.dropdown.js
@@ -212780,7 +212940,7 @@ C:\wamp\www\test\view\layout\web\main\default\datetime.tpl.html
 C:\wamp\www\test\view\layout\web\main\default\effect.tpl.html
 C:\wamp\www\test\view\layout\web\main\default\index.tpl.html
 C:\wamp\www\test\view\layout\web\main\default\message.tpl.html
-C:\wamp\www\test\view\layout\web\main\jquerytest\index.tpl.html
+C:\wamp\www\test\view\layout\web\main\jqtest\index.tpl.html
 C:\wamp\www\test\view\layout\web\main\news\fetch.tpl.html
 C:\wamp\www\test\view\layout\web\main\news\index.tpl.html
 C:\wamp\www\test\view\layout\web\nav\default\default.tpl.html
@@ -212788,6 +212948,6 @@ C:\wamp\www\test\view\layout\web\news.tpl.html
 C:\wamp\www\test\view\layout\web\script\default\effect.tpl.html
 C:\wamp\www\test\view\layout\web\script\default\index.tpl.html
 C:\wamp\www\test\view\layout\web\script\default\message.tpl.html
-C:\wamp\www\test\view\layout\web\script\jquerytest\index.tpl.html
+C:\wamp\www\test\view\layout\web\script\jqtest\index.tpl.html
 C:\wamp\www\test\view\layout\web\stylesheet\default\default.tpl.html
 C:\wamp\www\test\view\layout\web\tpl.tpl.html

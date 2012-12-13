@@ -20,12 +20,19 @@ class jqtestController extends appController
     function getevents()
     {
         $sql = "SELECT * FROM `douban_online_group` ORDER BY `id` DESC LIMIT 20";
+        $title = array();
         $events = get_data($sql);
         if (!empty($events)) {
             foreach ($events as $i=>$value) {
-                echo $events[$i]['title'];
+                array_push($title, $events[$i]['title']);
             }
-        }
+        };
+        echo json_encode( (object)$title );
+    }
+
+    function photos()
+    {
+        render( $data, null, 'default' );
     }
     
 }

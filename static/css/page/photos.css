@@ -1,0 +1,12 @@
+body {
+  font-family: arial;
+}
+ul#nav {
+  list-style-type: none;
+  margin: 10px 0 10px;
+  padding: 0;
+}
+ul#nav li {
+  float: left;
+  width: 30px;
+}
