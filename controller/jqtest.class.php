@@ -34,10 +34,5 @@ class jqtestController extends appController
     {
         render( $data, null, 'default' );
     }
-
-    function photos()
-    {
-        render( $data, null, 'default' );
-    }
     
 }
