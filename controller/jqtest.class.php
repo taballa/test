@@ -34,5 +34,4 @@ class jqtestController extends appController
     {
         render( $data, null, 'default' );
     }
-
 }
