@@ -12,8 +12,8 @@ function paginate_three($reload, $page, $tpages, $adjacents) {
         return;
     }
     
-    $prevlabel = "&lsaquo; 后一页";
-    $nextlabel = "前一页 &rsaquo;";
+    $prevlabel = "&lsaquo; 前一页";
+    $nextlabel = "后一页 &rsaquo;";
     
     $out = "<div class=\"pagin\">\n";
     

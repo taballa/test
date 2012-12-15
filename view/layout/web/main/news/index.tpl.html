@@ -27,6 +27,8 @@
         $reload = $_SERVER['PHP_SELF'] . "?c=news&a=index&tpages=" . $tpages . "&amp;adjacents=" . $adjacents;
         echo paginate_three($reload, $page, $tpages, $adjacents);
         ?>
+
+        
         <?php 
         if (g('pagenum') > 1) {
             ?>
